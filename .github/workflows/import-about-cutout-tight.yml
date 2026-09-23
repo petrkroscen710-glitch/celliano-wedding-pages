@@ -1,0 +1,34 @@
+name: Import cropped original O nas duo cutout
+
+on:
+  push:
+    paths:
+      - .github/workflows/import-about-cutout-tight.yml
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Download cropped original photo cutout
+        run: |
+          set -euo pipefail
+          mkdir -p assets
+          curl -L --fail --retry 3 --max-time 120 \
+            -o assets/celliano-about-duo-original-cutout.png \
+            'https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:86682370-50f0-430b-ae25-5114c33ec8d4'
+          test -s assets/celliano-about-duo-original-cutout.png
+          file assets/celliano-about-duo-original-cutout.png
+      - name: Commit cutout asset
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/celliano-about-duo-original-cutout.png
+          git commit -m "Assets: tighten original O nas duo cutout"
+          git push origin HEAD:main
