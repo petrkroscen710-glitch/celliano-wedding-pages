@@ -34,6 +34,7 @@ for(const rel of pages){
 }
 const contact=fs.readFileSync(path.join(root,'kontakt/index.html'),'utf8');
 if(!contact.includes('action="/api/poptavka.php"')) fail('contact form is not same-origin');
+if(contact.includes('STAGING_CONTACT_FALLBACK_START') || contact.includes('data-celliano-live-form')) fail('staging contact fallback leaked into production');
 for(const rel of ['.htaccess','api/poptavka.php','sitemap.xml','robots.txt','assets/celliano-home-duo-cutout.webp','assets/celliano-duo-wedding-cutout.png']){
   if(!fs.existsSync(path.join(root,rel))) fail('missing '+rel);
 }
