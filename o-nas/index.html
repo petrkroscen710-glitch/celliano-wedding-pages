@@ -356,6 +356,9 @@ main{background:#17111f}
   height:390px!important;
   margin:0 -12px 0 -8px!important;
   overflow:visible!important;
+  display:flex!important;
+  align-items:flex-end!important;
+  justify-content:center!important;
 }
 .celliano-about .ca-opening__portrait::before{
   content:''!important;
@@ -373,12 +376,12 @@ main{background:#17111f}
   position:relative!important;
   z-index:2!important;
   display:block!important;
-  width:100%!important;
+  width:auto!important;
   height:100%!important;
-  max-width:none!important;
+  max-width:132%!important;
   object-fit:contain!important;
   object-position:center bottom!important;
-  transform:scale(1.10)!important;
+  transform:scale(1.04)!important;
   transform-origin:center bottom!important;
   filter:drop-shadow(0 21px 24px rgba(0,0,0,.38))!important;
 }
@@ -386,28 +389,30 @@ main{background:#17111f}
   .celliano-about .ca-opening{
     grid-template-columns:minmax(0,.34fr) minmax(0,.38fr) minmax(205px,.28fr)!important;
   }
-  .celliano-about .ca-opening__portrait{height:335px!important}
-  .celliano-about .ca-opening__portrait img{transform:scale(1.08)!important}
+  .celliano-about .ca-opening__portrait{height:350px!important}
 }
 @media(max-width:680px){
   .celliano-about .ca-opening{grid-template-columns:1fr!important}
   .celliano-about .ca-opening__portrait{
-    height:430px!important;
-    margin:6px -12px -1px!important;
+    height:auto!important;
+    min-height:0!important;
+    margin:12px -8px -2px!important;
+    padding-top:8px!important;
   }
   .celliano-about .ca-opening__portrait::before{
-    width:96%!important;
-    height:65%!important;
-    bottom:1%!important;
+    width:88%!important;
+    height:72%!important;
+    bottom:0!important;
   }
   .celliano-about .ca-opening__portrait img{
-    width:100%!important;
-    height:100%!important;
-    transform:scale(1.02)!important;
+    width:min(82vw,520px)!important;
+    height:auto!important;
+    max-width:94%!important;
+    transform:none!important;
   }
 }
 @media(max-width:390px){
-  .celliano-about .ca-opening__portrait{height:395px!important}
+  .celliano-about .ca-opening__portrait img{width:min(84vw,470px)!important}
 }
 </style>
 <!-- ABOUT_ORIGINAL_DUO_2026_09_END -->
@@ -430,7 +435,7 @@ main{background:#17111f}
     <figure class="ca-hero-photo ca-hero-photo--stage"><img src="https://assets.zyrosite.com/N7F5VQWUOLqbMwrL/kc-cell-Xl9OwWJjrHSKIUlw.jpg" alt="Celliano při živém vystoupení" width="2880" height="2160" loading="lazy" decoding="async"><figcaption>Živá vystoupení</figcaption></figure>
   </div>
 </header>
-<div class="ca-opening"><div><span class="ca-opening__label">Seznamte se s námi</span><h2>Za hudbou stojíme my dva.</h2></div><p>Název Celliano vznikl jednoduše: cello a piano. Stejně přirozeně vzniká i naše hudba — z rozdílných zkušeností, společného citu pro melodii a radosti z toho, že každé živé vystoupení je trochu jiné.</p><figure class="ca-opening__portrait"><img src="/assets/celliano-about-duo-original-cutout.png" alt="Petr a Diana z Celliana s pianem a violoncellem" width="1319" height="1979" loading="lazy" decoding="async"></figure></div>
+<div class="ca-opening"><div><span class="ca-opening__label">Seznamte se s námi</span><h2>Za hudbou stojíme my dva.</h2></div><p>Název Celliano vznikl jednoduše: cello a piano. Stejně přirozeně vzniká i naše hudba — z rozdílných zkušeností, společného citu pro melodii a radosti z toho, že každé živé vystoupení je trochu jiné.</p><figure class="ca-opening__portrait"><img src="/assets/celliano-about-duo-original-cutout.png" alt="Petr a Diana z Celliana s pianem a violoncellem" width="710" height="1051" loading="lazy" decoding="async"></figure></div>
 <div class="ca-profiles">
 <article class="ca-card"><div class="ca-photo-wrap"><img class="ca-photo" src="https://assets.zyrosite.com/N7F5VQWUOLqbMwrL/petrk-UQJZ6XqnnjC7XSQ1.jpg" alt="Petr – piano a klávesy" loading="lazy" decoding="async"></div><div class="ca-card__body"><h2>Petr</h2><div class="ca-role">piano / klávesy</div><p>Petr se hudbě věnuje od dětství. Piano i klávesy jsou jeho přirozenou součástí už mnoho let, nejvíce ho formovala vlastní cesta, živé hraní a zkušenosti z kapel.</p><p>Vedle Celliana působí také jako kapelník autorské kapely PH+, kde s Dianou společně vystupují.</p><p>Hudebně je mu blízká improvizace, vytváření vlastních aranží a hledání vlastní podoby skladeb.</p></div></article>
 <article class="ca-card"><div class="ca-photo-wrap"><img class="ca-photo" src="https://assets.zyrosite.com/N7F5VQWUOLqbMwrL/dia-c-cPJGQZ2U7t2Oteh6.jpg" alt="Diana – violoncello" loading="lazy" decoding="async"></div><div class="ca-card__body"><h2>Diana</h2><div class="ca-role">violoncello</div><p>Diana je profesionální violoncellistka, která má za sebou široké zkušenosti z koncertů, pódií i výuky. Působí v Královéhradeckém kvartetu, učí v ZUŠ a s violoncellem dokáže zahrát pestrý repertoár.</p><p>Má za sebou vystoupení doma i v zahraničí a objevila se také na velkých festivalech, včetně Masters of Rock.</p></div></article>
