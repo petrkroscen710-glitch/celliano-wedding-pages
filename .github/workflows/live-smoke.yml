@@ -1,0 +1,33 @@
+name: Live site smoke check
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Promote tested site to production branch"]
+    types: [completed]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: celliano-live-smoke
+  cancel-in-progress: true
+
+jobs:
+  smoke:
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Give hosting a moment to settle
+        if: github.event_name == 'workflow_run'
+        run: sleep 10
+      - name: Check public pages and data dependencies
+        run: node tools/check-live.mjs
