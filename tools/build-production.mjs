@@ -40,7 +40,9 @@ for(const file of pages){
     .replaceAll('src="https://celliano.cz/assets/','src="/assets/')
     .replace(navFix,'');
   if(file==='kontakt/index.html'){
-    html=html.replace('action="https://celliano.cz/api/poptavka.php"','action="/api/poptavka.php"');
+    html=html
+      .replace('action="https://celliano.cz/api/poptavka.php" data-celliano-live-form="1"','action="/api/poptavka.php"')
+      .replace(/<!-- STAGING_CONTACT_FALLBACK_START -->[\s\S]*?<!-- STAGING_CONTACT_FALLBACK_END -->/,'');
   }
   write(file,html);
 }
