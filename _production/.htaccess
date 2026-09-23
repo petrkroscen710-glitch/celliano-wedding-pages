@@ -1,0 +1,11 @@
+# Release candidate only. Enable HTTPS in Hostinger and verify it before launch.
+Options -Indexes
+DirectoryIndex index.html
+RewriteEngine On
+# Preserve query strings. Only the three retired booking pages change destination.
+RewriteRule ^rezervujte-si-termn(?:-1|-2)?/?$ https://celliano.cz/kontakt/ [R=301,L]
+RewriteCond %{THE_REQUEST} \s/+([^?\ ]*/)?index\.html(?:[?\ ]) [NC]
+RewriteRule ^(.*)index\.html$ https://celliano.cz/$1 [R=301,L]
+RewriteRule ^(o-nas|svatby|firemni-akce|ukazky|reference|co-hrajeme|akce|kontakt)$ https://celliano.cz/$1/ [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.celliano\.cz$ [NC]
+RewriteRule ^ https://celliano.cz%{REQUEST_URI} [R=301,L]

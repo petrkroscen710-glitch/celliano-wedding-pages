@@ -1,0 +1,2 @@
+Generated from Celliano GitHub main branch.
+Do not edit production files manually; edit main and let the promotion workflow publish them.
