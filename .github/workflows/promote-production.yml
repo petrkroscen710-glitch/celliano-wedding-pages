@@ -39,6 +39,7 @@ jobs:
         run: |
           set -euo pipefail
           cp -a _production /tmp/celliano-production
+          rm -rf _production
           git fetch origin production
           git checkout -B production origin/production
           git rm -rf . >/dev/null 2>&1 || true
