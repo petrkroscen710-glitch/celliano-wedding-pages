@@ -52,7 +52,8 @@ for(const rel of [
   'api/poptavka.php',
   'sitemap.xml',
   'assets/celliano-home-duo-cutout.webp',
-  'assets/celliano-duo-wedding-cutout.png'
+  'assets/celliano-duo-wedding-cutout.png',
+  'assets/celliano-about-duo-original-cutout.png'
 ]){
   const dest=path.join(out,rel);
   fs.mkdirSync(path.dirname(dest),{recursive:true});
