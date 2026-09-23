@@ -27,13 +27,30 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Ensure tested commit is still current main
+        id: freshness
+        env:
+          SOURCE_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          if [ "$(git rev-parse origin/main)" = "$SOURCE_SHA" ]; then
+            echo "current=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "current=false" >> "$GITHUB_OUTPUT"
+            echo "Skipping stale tested commit $SOURCE_SHA; main has moved on."
+          fi
       - name: Build production package
+        if: steps.freshness.outputs.current == 'true'
         run: node tools/build-production.mjs
       - name: Verify production package
+        if: steps.freshness.outputs.current == 'true'
         run: node tools/verify-production-output.mjs _production
       - name: Verify PHP syntax
+        if: steps.freshness.outputs.current == 'true'
         run: php -l _production/api/poptavka.php
       - name: Publish production branch
+        if: steps.freshness.outputs.current == 'true'
         env:
           SOURCE_SHA: ${{ github.event.workflow_run.head_sha }}
         run: |
