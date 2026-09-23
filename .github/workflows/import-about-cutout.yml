@@ -1,0 +1,38 @@
+name: Import original O nas duo cutout
+
+on:
+  push:
+    paths:
+      - .github/workflows/import-about-cutout.yml
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Download Adobe background-removed original photo
+        run: |
+          set -euo pipefail
+          mkdir -p assets
+          curl -L --fail --retry 3 --max-time 120 \
+            -o assets/celliano-about-duo-original-cutout.png \
+            'https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:a5d7904d-5bd1-4bf4-a892-6a9f829fe56c'
+          test -s assets/celliano-about-duo-original-cutout.png
+          file assets/celliano-about-duo-original-cutout.png
+      - name: Commit cutout asset
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/celliano-about-duo-original-cutout.png
+          if git diff --cached --quiet; then
+            echo "Asset already current."
+            exit 0
+          fi
+          git commit -m "Assets: add original O nas duo cutout"
+          git push origin HEAD:main
