@@ -58,11 +58,12 @@ try{
 
 try{
   const html=bodies.get('/akce/')||'';
-  const urlm=html.match(/https:\/\/[A-Za-z0-9-]+\.supabase\.co\/rest\/v1\/[A-Za-z0-9_?=&.,-]+/);
+  const hostm=html.match(/https:\/\/[A-Za-z0-9-]+\.supabase\.co\/rest\/v1\//);
   const keym=html.match(/sb_publishable_[A-Za-z0-9_-]+/);
-  if(!urlm||!keym) fail('events Supabase public source not found');
+  const endpoint='celliano_event_snapshot?select=payload,updated_at,version&id=eq.1';
+  if(!hostm||!keym||!html.includes('celliano_event_snapshot')) fail('events Supabase public source not found');
   else{
-    const res=await fetch(urlm[0],{headers:{apikey:keym[0],Authorization:'Bearer '+keym[0],Accept:'application/json'}});
+    const res=await fetch(hostm[0]+endpoint,{headers:{apikey:keym[0],Authorization:'Bearer '+keym[0],Accept:'application/json'}});
     if(!res.ok) fail('events data HTTP '+res.status);
     else{
       const data=await res.json();
