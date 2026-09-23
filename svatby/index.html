@@ -183,13 +183,88 @@ body{background:#f6ecdc;color:#292638}
   .celliano-ui *, #celliano-repertoire *, #celliano-events *, #celliano-akce * { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }
 </style><link rel="canonical" href="https://celliano.cz/svatby/"><meta property="og:type" content="website"><meta property="og:locale" content="cs_CZ"><meta property="og:site_name" content="Celliano"><meta property="og:url" content="https://celliano.cz/svatby/"><meta property="og:title" content="Živá hudba na svatbu – piano a violoncello | Celliano"><meta property="og:description" content="Živá hudba pro váš svatební obřad, hostinu i další společné chvíle. Vyberte si doprovod piana a violoncella a domluvte si s Cellianem svůj termín."><meta property="og:image" content="https://celliano.cz/assets/celliano-duo-wedding-cutout.png"><meta property="og:image:alt" content="Petr a Diana – Celliano"><meta name="twitter:card" content="summary"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"MusicGroup","@id":"https://celliano.cz/#celliano","name":"Celliano","url":"https://celliano.cz/","description":"Hudební duo – piano a violoncello","email":"celliano@seznam.cz"},{"@type":"WebSite","@id":"https://celliano.cz/#website","url":"https://celliano.cz/","name":"Celliano","inLanguage":"cs","publisher":{"@id":"https://celliano.cz/#celliano"}},{"@type":"WebPage","@id":"https://celliano.cz/svatby/#webpage","url":"https://celliano.cz/svatby/","name":"Živá hudba na svatbu – piano a violoncello | Celliano","description":"Živá hudba pro váš svatební obřad, hostinu i další společné chvíle. Vyberte si doprovod piana a violoncella a domluvte si s Cellianem svůj termín.","inLanguage":"cs","isPartOf":{"@id":"https://celliano.cz/#website"},"about":{"@id":"https://celliano.cz/#celliano"}}]}</script><!-- PHOTO_CAPTION_GUARD_2026_09_START --><style>figure > figcaption{display:none!important}</style><!-- PHOTO_CAPTION_GUARD_2026_09_END -->
+<style id="wedding-cards-approved">
+
+    .wedding-music, .wedding-music * { box-sizing: border-box; }
+    .wedding-music {
+      position: relative; isolation: isolate; overflow: hidden;
+      min-height: 100vh; padding: clamp(74px, 10vw, 130px) 0 115px;
+      background: #fbf9f4;
+      color: #30283c; font-family: Poppins, Arial, sans-serif;
+    }
+    .wedding-music__inner { position: relative; max-width: 1150px; margin: auto; padding: 0 24px; }
+    .wedding-music__intro { position: relative; z-index: 3; text-align: center; max-width: 780px; margin: 0 auto clamp(48px, 7vw, 72px); }
+    .wedding-music__eyebrow { margin: 0 0 23px; color: #927a4b; font-size: 13px; font-weight: 600; letter-spacing: .27em; text-transform: uppercase; }
+    .wedding-music h2 { margin: 0; font: 400 clamp(42px, 5.5vw, 72px)/1.16 'Playfair Display', Georgia, serif; letter-spacing: -.015em; }
+    .wedding-music__lead { max-width: 710px; margin: 30px auto 0; color: #656170; font-size: clamp(16px, 2vw, 21px); line-height: 1.8; }
+    .wedding-music__cards { position: relative; display: grid; gap: clamp(24px, 3.5vw, 42px); }
+    .wedding-music__cards-art {
+      position: absolute; z-index: 2; pointer-events: none;
+      height: calc(100% + 30px); width: auto; max-width: none;
+      top: -15px; right: -4%; opacity: .34; mix-blend-mode: screen;
+    }
+    .wedding-music__card {
+      width: 100%; position: relative; overflow: hidden;
+      padding: clamp(30px, 4.5vw, 57px) clamp(30px, 5.5vw, 72px);
+      background: linear-gradient(115deg, #453450, #31263e 72%); color: #fffaf2;
+      border: 1px solid rgba(215,189,142,.56); border-top: 4px solid #d0b47d;
+      box-shadow: 0 16px 34px rgba(48,38,62,.13), inset 0 1px rgba(255,255,255,.07);
+    }
+    .wedding-music__card::before {
+      content: ""; position: absolute; z-index: 2; inset: 0; pointer-events: none;
+      background: linear-gradient(90deg, rgba(29,22,41,.55) 0%, rgba(29,22,41,.38) 64%, rgba(29,22,41,.12) 100%);
+    }
+    .wedding-music__card > * { position: relative; z-index: 3; }
+    .wedding-music__card:nth-child(odd) { justify-self: start; }
+    .wedding-music__card:nth-child(even) { justify-self: start; }
+    .wedding-music__number { display: block; margin-bottom: 10px; color: #d3b781; font: 400 clamp(49px, 6vw, 77px)/1 'Playfair Display', Georgia, serif; }
+    .wedding-music__card h2 { margin: 0 0 18px; font: 400 clamp(34px, 4vw, 48px)/1.2 'Playfair Display', Georgia, serif; text-shadow: 0 2px 12px #1d1629; }
+    .wedding-music__card p { max-width: 630px; margin: 0; color: #fffaf3; font-size: clamp(16px, 1.8vw, 20px); font-weight: 500; line-height: 1.85; text-shadow: 0 1px 8px #1d1629; }
+    @media (max-width: 680px) {
+      .wedding-music { padding: 75px 0 100px; }
+      .wedding-music__inner { padding: 0 16px; }
+      .wedding-music__eyebrow { font-size: 11px; letter-spacing: .22em; }
+      .wedding-music__lead { margin-top: 25px; }
+      .wedding-music__cards { gap: 23px; }
+      .wedding-music__card { width: 100%; padding: 31px 26px 38px; }
+      .wedding-music__card::before { background: linear-gradient(90deg, rgba(29,22,41,.67) 0%, rgba(29,22,41,.48) 78%, rgba(29,22,41,.20) 100%); }
+      .wedding-music__cards-art { height: calc(100% + 60px); top: -30px; right: -64%; opacity: .27; }
+    }
+  
+</style>
 </head><body><a href="#content" class="skip">Přejít na obsah</a><header class="site-header"><div class="site-header__inner"><a class="brand" href="/" aria-label="Celliano – domů"><span class="brand-mark"><img src="https://assets.zyrosite.com/N7F5VQWUOLqbMwrL/c-logo-tmav-celliano-web-cLe3Vkayn2Fww72U.png" alt="" width="46" height="46"></span></a><nav class="site-menu" aria-label="Hlavní navigace"><a href="/">Domů</a><a href="/o-nas/">O nás</a><a href="/svatby/" aria-current="page">Svatby</a><a href="/firemni-akce/">Firemní akce</a><a href="/ukazky/">Ukázky</a><a href="/reference/">Reference</a><a href="/co-hrajeme/">Co hrajeme</a><a href="/akce/">Akce</a><a href="/kontakt/">Kontakt</a></nav><nav class="site-social site-social--header" aria-label="Celliano na sociálních sítích"><a href="https://www.tiktok.com/@celliano_cello_piano" target="_blank" rel="noopener noreferrer" aria-label="Celliano na TikTok" title="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M14.2 2.8c.3 2.8 1.9 4.3 4.7 4.5v3.2c-1.6 0-3.2-.6-4.7-1.6v5.5a5.2 5.2 0 1 1-5.2-5.2h.3v3.2a2 2 0 1 0 1.7 2V2.8h3.2Z"/></svg></a><a href="https://www.youtube.com/@celliano_cello_piano" target="_blank" rel="noopener noreferrer" aria-label="Celliano na YouTube" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2" y="5" width="20" height="14" rx="4" fill="currentColor"/><path d="m10 9 6 3-6 3V9Z" fill="#211a2c"/></svg></a><a href="https://www.facebook.com/profile.php?id=61573140607977" target="_blank" rel="noopener noreferrer" aria-label="Celliano na Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M14.4 21v-8h2.7l.45-3.4H14.4V7.5c0-1 .3-1.5 1.7-1.5h1.6V3h-2.3C11.8 3 10.9 4.7 10.9 7.2v2.4H8.5V13h2.4v8h3.5Z"/></svg></a><a href="https://www.instagram.com/celliano_cello_piano/" target="_blank" rel="noopener noreferrer" aria-label="Celliano na Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></svg></a></nav></div></header><main id="content"><section class="celliano-wedding" aria-labelledby="wedding-heading">
 
 <!-- CELLIANO_THEME_START -->
 
 <!-- CELLIANO_THEME_END -->
 <header class="cw-hero"><div class="cw-hero__copy"><p class="cw-eyebrow">Celliano pro váš svatební den</p><h1 id="wedding-heading">Živá hudba pro svatby</h1><span class="cw-ornament" aria-hidden="true">✦</span><p class="celliano-intro">Od prvního příchodu až po večerní setkání. Piano a violoncello doprovodí váš den přirozeně, citlivě a přesně podle jeho atmosféry.</p><a class="cw-button" href="/kontakt/#poptavka">Poptat svatební termín</a></div><figure class="cw-hero__photo"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1400/N7F5VQWUOLqbMwrL/svatba-ko-cell-Lq3PbQlVLPfFcVTX.jpg" alt="Petr a Diana z Celliana na svatebním místě" width="2878" height="2160" fetchpriority="high" decoding="async"></figure></header>
-<div class="cw-offer"><p class="cw-kicker">Vyberte si rozsah hudby</p><h2 class="cw-heading">Hudba pro celý váš den</h2><p class="cw-caption">Od prvních tónů při obřadu po hudební doprovod večerního setkání.</p><div class="cw-grid-3"><article class="cw-card"><span class="cw-number" aria-hidden="true">01</span><h2>Obřad</h2><p>Hudba pro příchod svatebního páru, samotný obřad, podpisy, gratulace i závěrečný odchod.</p></article><article class="cw-card"><span class="cw-number" aria-hidden="true">02</span><h2>Obřad + hostina</h2><p>Pokud chcete hudbu i po obřadu, zahrajeme během focení, hostiny a navodíme atmosféru podle vašich představ.</p></article><article class="cw-card"><span class="cw-number" aria-hidden="true">03</span><h2>Celodenní varianta</h2><p>Když chcete mít živou hudbu jako součást celého dne — od prvních momentů až po večerní atmosféru.</p></article></div></div>
+<section class="wedding-music" aria-labelledby="wedding-music-title">
+  <div class="wedding-music__inner">
+    <header class="wedding-music__intro">
+      <p class="wedding-music__eyebrow">Vyberte si rozsah hudby</p>
+      <h2 id="wedding-music-title">Hudba pro celý váš den</h2>
+      <p class="wedding-music__lead">Od prvních tónů při obřadu po hudební doprovod večerního setkání.</p>
+    </header>
+    <div class="wedding-music__cards">
+      <img class="wedding-music__cards-art" src="https://celliano.cz/assets/wedding-cards-motif.png" alt="" aria-hidden="true">
+      <article class="wedding-music__card">
+        <span class="wedding-music__number" aria-hidden="true">01</span>
+        <h2>Obřad</h2>
+        <p>Hudba pro příchod svatebního páru, samotný obřad, podpisy, gratulace i závěrečný odchod.</p>
+      </article>
+      <article class="wedding-music__card">
+        <span class="wedding-music__number" aria-hidden="true">02</span>
+        <h2>Obřad + hostina</h2>
+        <p>Pokud chcete hudbu i po obřadu, zahrajeme během focení, hostiny a navodíme atmosféru podle vašich představ.</p>
+      </article>
+      <article class="wedding-music__card">
+        <span class="wedding-music__number" aria-hidden="true">03</span>
+        <h2>Celý den</h2>
+        <p>Od obřadu přes odpolední slavnost až po večerní setkání. Hudba provází celý váš svatební den a přizpůsobí se jeho průběhu.</p>
+      </article>
+    </div>
+  </div>
+</section>
 <div class="cw-section cw-moments"><p class="cw-kicker">Výjimečné chvíle</p><h2 class="cw-heading">Kde se Celliano hodí</h2><div class="cw-list"><div>Příchod svatebního páru</div><div>Podpisy a gratulace</div><div>Welcome drink</div><div>Slavnostní hostina</div><div>První tanec</div><div>Večerní atmosféra</div></div></div>
 <div class="cw-section cw-request"><div class="cw-request__text"><p class="cw-kicker">Vaše oblíbená melodie</p><h2>Skladba na přání</h2><p>Máte píseň, která k vašemu dni patří? Pokud to bude možné, rádi ji pro vás připravíme. U náročnějších individuálních aranží může být domluven příplatek.</p></div><span class="cw-request__symbol" aria-hidden="true">♪</span></div>
 <div class="cw-section cw-process"><p class="cw-kicker">Jednoduchá domluva</p><h2 class="cw-heading">Jak to probíhá</h2><div class="cw-grid-4"><div class="cw-step"><strong>Napíšete nám</strong><span>Termín, místo a základní představu.</span></div><div class="cw-step"><strong>Domluvíme detaily</strong><span>Rozsah hraní, průběh dne a vše potřebné.</span></div><div class="cw-step"><strong>Připravíme hudbu</strong><span>Podle domluvy i s konkrétními skladbami.</span></div><div class="cw-step"><strong>Přijedeme a hrajeme</strong><span>Včetně vlastního ozvučení podle potřeby.</span></div></div><div class="cw-process__cta"><a class="cw-button" href="/kontakt/#poptavka">Nezávazně poptat termín</a></div></div>
