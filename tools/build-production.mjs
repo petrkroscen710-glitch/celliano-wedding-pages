@@ -54,7 +54,8 @@ for(const rel of [
   'assets/celliano-home-duo-cutout.webp',
   'assets/celliano-duo-wedding-cutout.png',
   'assets/celliano-about-duo-original-cutout.png',
-  'assets/celliano-about-duo-original-cutout-v2.png'
+  'assets/celliano-about-duo-original-cutout-v2.png',
+  'assets/celliano-about-duo-enhanced-v3.png'
 ]){
   const dest=path.join(out,rel);
   fs.mkdirSync(path.dirname(dest),{recursive:true});
