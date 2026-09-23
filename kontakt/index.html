@@ -237,7 +237,8 @@ body{background:#f6ecdc;color:#292638}
     a.setAttribute('href', prefix + href);
   });
 })();
-</script><script>
+</script><!-- STAGING_CONTACT_FALLBACK_START -->
+<script>
 (function(){
   var form=document.querySelector('form[data-celliano-live-form="1"]');
   if(!form || location.hostname==='celliano.cz' || location.hostname==='www.celliano.cz') return;
@@ -252,4 +253,5 @@ body{background:#f6ecdc;color:#292638}
     location.href='mailto:celliano@seznam.cz?subject='+encodeURIComponent('Poptávka – Celliano')+'&body='+encodeURIComponent(msg);
   });
 })();
-</script></body></html>
+</script>
+<!-- STAGING_CONTACT_FALLBACK_END --></body></html>
