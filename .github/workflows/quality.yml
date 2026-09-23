@@ -1,0 +1,23 @@
+name: Quality check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify public site structure
+        run: node tools/verify-site.mjs
+      - name: Verify contact endpoint PHP syntax
+        run: php -l api/poptavka.php
