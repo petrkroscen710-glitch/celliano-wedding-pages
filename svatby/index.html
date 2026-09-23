@@ -234,22 +234,46 @@ body{background:#f6ecdc;color:#292638}
 </style>
 <!-- CARDS_MOTIF_TUNING_2026_09_START -->
 <style>
-/* Wedding motif: keep the full piano/cello line art visually on the right,
-   with the important part crossing the middle of the cards on mobile. */
+/* Wedding cards now mirror the approved corporate-card motif treatment. */
+.wedding-music__cards{
+  position:relative!important;
+  isolation:isolate!important;
+}
 .wedding-music__cards-art{
-  height:calc(100% + 92px)!important;
-  top:-46px!important;
+  position:absolute!important;
+  z-index:2!important;
+  pointer-events:none!important;
+  width:auto!important;
+  max-width:none!important;
+  height:calc(100% + 76px)!important;
+  top:-38px!important;
   right:-18%!important;
-  opacity:.46!important;
+  opacity:.14!important;
   mix-blend-mode:screen!important;
-  filter:contrast(1.08) brightness(1.07)!important;
+  filter:contrast(1.02) brightness(1.01)!important;
+}
+.wedding-music__card{
+  position:relative!important;
+  overflow:hidden!important;
+}
+.wedding-music__card > *{
+  position:relative!important;
+  z-index:3!important;
+}
+@media(max-width:960px){
+  .wedding-music__cards-art{
+    height:calc(100% + 105px)!important;
+    top:-52px!important;
+    right:-34%!important;
+    opacity:.11!important;
+  }
 }
 @media(max-width:680px){
   .wedding-music__cards-art{
-    height:calc(100% + 132px)!important;
-    top:-66px!important;
-    right:-56%!important;
-    opacity:.43!important;
+    height:calc(100% + 118px)!important;
+    top:-59px!important;
+    right:-48%!important;
+    opacity:.09!important;
   }
 }
 </style>
